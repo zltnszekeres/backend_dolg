@@ -1,5 +1,6 @@
 <?php
 use App\Models\Product_type;
+use GuzzleHttp\Promise\Create;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -24,18 +25,20 @@ return new class extends Migration
             'name' => 'Pzt', 
             'description' => 'intelligens vasaló',
             'cost'=>'35000'
-        ],
-        [
+        ]);
+        Product_type::create ([
             'name'=>'Lmn',
             'description' => 'intelligens porszivó',
             'cost'=>'55000'
-        ],
-        [
+        ]);
+        Product_type::create([
             'name'=>'Vzs',
             'description' => 'intelligens konyhagép',
             'cost'=>'65000'
         ]
     );
+
+
         
     }
 
